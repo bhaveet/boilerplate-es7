@@ -4,13 +4,12 @@ import { ResponseBody } from "../helpers"
 import HealthRouter from "./Health"
 import VersionRouter from "./Version"
 
-
 const Routes = [
 	{ path: "/health", router: HealthRouter },
 	{ path: "/version", router: VersionRouter },
 ]
 
-Routes.init = (app) => {
+const routeInit = (app: any) => {
   if (!app || !app.use) {
     console.error('[Error] Route Initialization Failed: app / app.use is undefined')
     return process.exit(1)
@@ -20,7 +19,7 @@ Routes.init = (app) => {
   Routes.forEach(route => app.use(route.path, route.router))
 
   // Final Route Pipeline
-  app.use('*', (request, response, next) => {
+  app.use('*', (request:any, response:any, next:any) => {
     if (!request.isMatched) {
       const { method, originalUrl } = request
       const message = `Cannot ${method} ${originalUrl}`
@@ -32,7 +31,7 @@ Routes.init = (app) => {
   })
 
   // Route Error Handler
-  app.use((error, request, response, next) => {
+  app.use((error: any, request:any, response:any, next:any) => {
     if (!error) { return process.nextTick(next) }
     console.log(error)
 
@@ -50,7 +49,7 @@ Routes.init = (app) => {
   })
 }
 
-function _sendResponse (request, response, next) {
+function _sendResponse (request:any, response:any, next:any) {
   let resBody = response.body || {}
   const { statusCode } = resBody
 
@@ -61,4 +60,9 @@ function _sendResponse (request, response, next) {
   response.status(resBody.statusCode).json(resBody)
 }
 
-export default Routes
+const Routing = {
+	Routes,
+	routeInit
+}
+
+export default Routing

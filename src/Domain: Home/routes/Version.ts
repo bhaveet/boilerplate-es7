@@ -4,7 +4,7 @@ import Express from 'express'
 import { routerUtils, asyncWrapper } from '../helpers'
 import { VersionController } from '../controllers'
 
-const VersionRouter = new Express.Router()
+const VersionRouter = Express.Router()
 const { get } = VersionController
 const { routeSanity } = routerUtils
 

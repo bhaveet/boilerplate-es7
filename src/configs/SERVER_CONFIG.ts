@@ -1,7 +1,7 @@
 'use strict'
 
 const {
-  PORT: number = 8080,
+  PORT = 8080,
   BODY_LIMIT = '5mb',
   ALLOW_CORS_ORIGIN = '*',
   ALLOW_CORS_METHODS = ''
@@ -24,8 +24,8 @@ const SERVER_CONFIG = {
 
 export default SERVER_CONFIG
 
-function _sanitizeRegExpStr (string) {
-  const escapedString = string.trim().replace(/[./]/g, '\\$&')
+function _sanitizeRegExpStr (_string: string) {
+  const escapedString = _string.trim().replace(/[./]/g, '\\$&')
   const whildcardReplaced = escapedString.replace(/\*/g, '[0-9a-zA-Z.\\-_:]*')
   return `^${whildcardReplaced}$`.trim()
 }

@@ -8,7 +8,7 @@ import {
 
 const { PORT } = SERVER_CONFIG
 
-const startServer = async (app) => {
+const startServer = async (app:any) => {
   try {
     // Connect to MongoDB
     // await MONGO_CONFIG.mongoConnect()

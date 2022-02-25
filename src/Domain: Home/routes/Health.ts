@@ -5,7 +5,7 @@ import { routerUtils, asyncWrapper } from '../helpers'
 
 import { HealthController } from '../controllers'
 
-const HealthRouter = new Express.Router()
+const HealthRouter = Express.Router()
 const { get } = HealthController
 const { routeSanity } = routerUtils
 

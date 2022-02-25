@@ -10,7 +10,7 @@ const VersionModel = {
 
 export default VersionModel
 
-async function get ()
+async function get () {
   const response = {
     name: NAME,
     description: DESCRIPTION,

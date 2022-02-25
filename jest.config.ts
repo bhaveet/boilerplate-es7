@@ -2,7 +2,7 @@
 // https://jestjs.io/docs/en/configuration.html
 import type { Config } from '@jest/types';
 
-const config = 
+const config =
 module.exports = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,

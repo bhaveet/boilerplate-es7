@@ -2,17 +2,17 @@
   "name": "nodejs-es7-boilerplate",
   "version": "1.0.0",
   "description": "ES7 boilerplate",
-  "main": "server.js",
+  "main": "build/app.ts",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "jest --forceExit --coverage --passWithNoTests",
+    "test": "jest --forceExit --coverage --passWithNoTests --detectOpenHandles",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
     "fix": "gts fix",
-    "dev": "tsc && concurrently \"tsc -w\" \"nodemon --delay 0 --watch ../commons/lib --watch ../../config --watch build build/index.js\"",
+    "dev": "tsc && concurrently \"tsc -w\" \"nodemon --delay 0 --watch build build/app.js\"",
     "start": "npm run dev && node build/app.js"
   },
   "keywords": [
@@ -22,7 +22,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
     "helmet": "^5.0.2",
+    "jest": "^27.5.1",
     "save": "^2.4.0",
     "uuid": "^8.3.2"
   },

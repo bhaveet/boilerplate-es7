@@ -1,6 +1,6 @@
 'use strict'
 
-import { HomeModel } from '../../api/models/Home'
+import { HealthModel } from '../../Domain: Home/models/'
 
 describe('Home Module Testing', () => {
   test('Get Server Version', async() => {
@@ -9,7 +9,7 @@ describe('Home Module Testing', () => {
       version: '1.0.0',
       description: 'ES7 boilerplate',
     }
-    let result = await HomeModel.getVersion();
+    let result = await HealthModel.get();
     expect(result).toMatchObject(expectedResult);
   })
 })

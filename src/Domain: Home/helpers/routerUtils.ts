@@ -20,7 +20,7 @@ function sendResponse (request:any, response:any, next:any) {
   response.status(body.statusCode).json(body)
 }
 
-function routeSanity (request, response, next) {
+function routeSanity (request: any, response: any, next: any) {
   request.isMatched = true
   process.nextTick(next)
 }
