@@ -4,7 +4,7 @@ import Express from 'express'
 import cors from 'cors'
 import bodyParser from 'body-parser'
 import helmet from 'helmet'
-import Routing from './Domain: Home/routes'
+import Routing from './app/routes'
 import { SERVER_CONFIG } from './configs'
 import startServer from './startServer'
 

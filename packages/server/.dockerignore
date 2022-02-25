@@ -5,3 +5,4 @@ test
 npm-debug.log
 .git
 *.md
+*.sh
