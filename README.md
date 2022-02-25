@@ -1,1 +1,1 @@
-# boilerplate-es7
+# boilerplate-es7-typescript

@@ -9,7 +9,7 @@ const routerUtils = {
 
 export default routerUtils
 
-function sendResponse (request, response, next) {
+function sendResponse (request:any, response:any, next:any) {
   let { body } = response
   const { statusCode } = body || {}
 

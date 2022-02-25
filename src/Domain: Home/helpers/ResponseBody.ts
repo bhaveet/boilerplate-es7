@@ -3,7 +3,13 @@
 import http from 'http'
 
 export default class ResponseBody {
-  constructor (statusCode, message, data, error) {
+  statusCode: number;
+  status?: string;
+  message?: string;
+  data?: any;
+  error?: any;
+
+  constructor (statusCode:number, message?:string, data?:any, error?:any) {
     this.statusCode = statusCode
     this.status = http.STATUS_CODES[statusCode]
     this.message = message

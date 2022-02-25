@@ -1,6 +1,8 @@
 // For a detailed explanation regarding each configuration property, visit:
 // https://jestjs.io/docs/en/configuration.html
+import type { Config } from '@jest/types';
 
+const config = 
 module.exports = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -123,7 +125,7 @@ module.exports = {
   // runner: "jest-runner",
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
-  setupFiles: ['<rootDir>/jestSetup.js'],
+  setupFiles: ['<rootDir>/jestSetup.ts'],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
   // setupFilesAfterEnv: [],

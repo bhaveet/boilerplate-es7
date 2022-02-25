@@ -53,3 +53,9 @@ typings/
 
 # Shell scripts
 *.sh
+
+# Build
+/build
+
+#Package-lock
+package-lock.json
