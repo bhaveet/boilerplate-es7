@@ -1,23 +1,23 @@
 # boilerplate-es7-typescript
 
 ### Project Release Pipeline
-
-- [x] User stories
-- [x] Design
-- [x] Mockups
-- [x] Architechture, HLD, and LLD
-- [x] Architechture, HLD, and LLD Approval
-- [x] Development
-- [x] Unit testing
-- [ ] Code Review
-- [ ] Staging
-- [ ] QA
-- [ ] CUG
-- [ ] Production
+- Action: *SPOC*
+- User stories: *Product Manager*
+- Design: *Product Manager*
+- Mockups/Contracts: *Developer*
+- Architechture, HLD, and LLD: *Developer*
+- Architechture, HLD, and LLD Approval: *SENIOR DEV/EM/HOD/*
+- Development: *Developer*
+- Unit testing: *Developer*
+- Code Review: *SENIOR DEV/EM/HOD/*
+- Staging: *SENIOR DEV/EM/HOD/*
+- QA: *QA team*
+- CUG/Business approval: *Business*
+- Production: *DevOps*
 
 ### Request Processing Pipeline
-> Routes-> Controllers-> Services-> Models
-> Detailed: ->RequestHandlers(Authentication -> Route Sanity)-> RequestValidator(middleware)
+> - Routes-> Controllers-> Services-> Models
+> - Detailed: ->RequestHandlers(Authentication -> Route Sanity)-> RequestValidator(middleware)
             -> Controller -> Services -> Models -> Database
 
 ### Folder Structure
@@ -50,6 +50,7 @@
 >
 - Environment variables and default configs of server/database/service configuration.
 - Always use uppercase for environment variables with **SNAKE CASE**.
+- Server should **not start** if configs are missing.
 
 #### app: [**app**](packages/server/src/app)
 >Contains **Routes, Controllers, Models, Services, Validators, Schemas and Constants**.
@@ -92,12 +93,12 @@
 - It is expected that you write the self documented code. Use proper variable name (Don't use shortcuts, abbvrs.)
 - File naming under a controller/routes/models/schemas/validators/helpers should be on the name of domain.
   Like for user
-  FileName: User.js in respective folders
-  Routes: will be exported as UserRouter
-  Models: will be exported as UserModel
-  Controller: will be exported as UserController
-  Service: will be exported as UserService
-  Schemas: will be exported as UserSchema
+  - FileName: User.js in respective folders
+  - Routes: will be exported as UserRouter
+  - Models: will be exported as UserModel
+  - Controller: will be exported as UserController
+  - Service: will be exported as UserService
+  - Schemas: will be exported as UserSchema
 >
 - Instead for writing huge functions split them into multiple functions.
 
@@ -108,7 +109,7 @@
 - After releasing the first version(1.0.0) of application please update the version in the next release/hot-fix
 >
 **DB_VERSIONING**
-- It's recommended to DB version. If using Mongo use **__v** for versioning and for other DB's their respective version control functionalities.
+- It's recommended to maintain DB version. If using Mongo use **__v** for versioning and for other DB's their respective version control functionalities.
 
 #### Should follow:
 > Not following above code structure and following principles will lead to PR rejection.
@@ -120,3 +121,6 @@
 - **Avoid premature optimization**
 - **S.O.L.I.D** programming principles
 - **Modularity**
+
+#### Code contribution guidelines:
+[READ](https://docs.google.com/document/d/1ILol-Wq38pp31KhtHWF5eBQr7-7NDG4szgUBJ70zXlQ/edit)
