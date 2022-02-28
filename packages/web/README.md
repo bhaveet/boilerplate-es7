@@ -1,4 +1,4 @@
-# boilerplate-es7-typescript
+# web
 
 
 #### Folder structure
