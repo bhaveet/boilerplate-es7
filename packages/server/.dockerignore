@@ -1,0 +1,8 @@
+Jenkins*
+helm*
+Dockerfile
+test
+npm-debug.log
+.git
+*.md
+*.sh

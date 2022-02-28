@@ -1,0 +1,19 @@
+{
+    "extends": "./node_modules/gts/tsconfig-google.json",
+    "compileOnSave": false,
+    "compilerOptions": {
+        "resolveJsonModule": true,
+        "moduleResolution": "node",
+        "strictNullChecks": true,
+        "removeComments": true,
+        "allowJs": false,
+        "rootDir": "src",
+        "strict": true,
+        "outDir": "build",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "noImplicitReturns": false,
+        "lib": ["es2015", "es2016", "dom", "es2018.promise", "es2021"],
+    },
+    "include": ["src/**/*.ts", "test/**/*.ts"]
+}
