@@ -22,59 +22,59 @@
 
 ### Folder Structure
 
-- [**build**](packages/server/build)
-- [**src**](packages/server/src)
-    - [**app**](packages/server/src/app)
-        - [**constants**](packages/server/src/app/constants)
-        - [**controllers**](packages/server/src/app/controllers)
-        - [**helpers**](packages/server/src/app/helpers)
-        - [**models**](packages/server/src/app/models)
-        - [**routes**](packages/server/src/app/routes)
-        - [**schemas**](packages/server/src/app/schemas)
-        - [**services**](packages/server/src/app/services)
-        - [**validators**](packages/server/src/app/validators)
-    - [**configs**](packages/server/src/configs)
-    - [**test**](packages/server/src/test)
-        - [**models**](packages/server/src/test/models)
+- [**build**](build)
+- [**src**](src)
+    - [**app**](src/app)
+        - [**constants**](src/app/constants)
+        - [**controllers**](src/app/controllers)
+        - [**helpers**](src/app/helpers)
+        - [**models**](src/app/models)
+        - [**routes**](src/app/routes)
+        - [**schemas**](src/app/schemas)
+        - [**services**](src/app/services)
+        - [**validators**](src/app/validators)
+    - [**configs**](src/configs)
+    - [**test**](src/test)
+        - [**models**](src/test/models)
 
-#### build: [**build**](packages/server/build)
+#### build: [**build**](build)
 > Contains project build.
 
-#### test: [**test**](packages/server/src/test)
+#### test: [**test**](src/test)
 > Contains all the test suite(unit test cases).
 
-#### src: [**src**](packages/server/src)
+#### src: [**src**](src)
 > Contains all the TS code.
 
-#### configs: [**configs**](packages/server/src/configs)
+#### configs: [**configs**](src/configs)
 >
 - Environment variables and default configs of server/database/service configuration.
 - Always use uppercase for environment variables with **SNAKE CASE**.
 - Server should **not start** if configs are missing.
 
-#### app: [**app**](packages/server/src/app)
+#### app: [**app**](src/app)
 >Contains **Routes, Controllers, Models, Services, Validators, Schemas and Constants**.
 
-#### constants: [**constants**](packages/server/src/app/constants)
+#### constants: [**constants**](src/app/constants)
 > Contains all **constants** of used inside the application. Eg. CUSTOM_ERRORS, MICROSERVICES_ENDPOINTS, etc.
 
-#### routes: [**routes**](packages/server/src/app/routes)
+#### routes: [**routes**](src/app/routes)
 > Contains route and a master Route handler i.e. index.js
 **Avoid:** Creating functions in routes. Use middleware for custom functionalities.
 
-#### controllers: [**controllers**](packages/server/src/app/controllers)
+#### controllers: [**controllers**](src/app/controllers)
 > Contains controllers
 
-#### models: [**models**](packages/server/src/app/models)
+#### models: [**models**](src/app/models)
 > Contains models. DB calls
 
-#### services: [**services**](packages/server/src/app/services)
+#### services: [**services**](src/app/services)
 > Logic orchestration will happen at services layer
 
-#### schemas: [**schemas**](packages/server/src/app/schemas)
+#### schemas: [**schemas**](src/app/schemas)
 > DB Schema declaration
 
-#### validators: [**validators**](packages/server/src/app/validators)
+#### validators: [**validators**](src/app/validators)
 > Request level validations. Will be used as middleware in respective route files.
 
 #### How to setup:
