@@ -1,19 +1,19 @@
 # boilerplate-es7-typescript
 
 ### Project Release Pipeline
-- Action: *SPOC*
-- User stories: *Product Manager*
-- Design: *Product Manager*
-- Mockups/Contracts: *Developer*
-- Architechture, HLD, and LLD: *Developer*
-- Architechture, HLD, and LLD Approval: *SENIOR DEV/EM/HOD/*
-- Development: *Developer*
-- Unit testing: *Developer*
-- Code Review: *SENIOR DEV/EM/HOD/*
-- Staging: *SENIOR DEV/EM/HOD/*
-- QA: *QA team*
-- CUG/Business approval: *Business*
-- Production: *DevOps*
+- **Action**: *SPOC*
+- **User stories**: *Product Manager*
+- **Design**: *Product Manager*
+- **Mockups/Contracts**: *Developer*
+- **Architechture, HLD, and LLD**: *Developer*
+- **Architechture, HLD, and LLD Approval**: *SENIOR DEV/EM/HOD/*
+- **Development**: *Developer*
+- **Unit testing**: *Developer*
+- **Code Review**: *SENIOR DEV/EM/HOD/*
+- **Staging**: *SENIOR DEV/EM/HOD/*
+- **QA**: *QA team*
+- **CUG/Business approval**: *Business*
+- **Production**: *DevOps*
 
 ### Request Processing Pipeline
 > - Routes-> Controllers-> Services-> Models
